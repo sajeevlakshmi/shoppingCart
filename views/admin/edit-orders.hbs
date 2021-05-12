@@ -1,0 +1,73 @@
+<section class="order-details">
+  <div class="container">
+    <div class="row">
+     <div class="table-responsive">
+        <table class="table p-5" id="orders">
+          <thead>
+            <tr>
+              <th scope="col">Date</th>
+              <th scope="col">OrderId</th>
+              <th scope="col">Name</th>
+              <th scope="col">Pincode</th>
+              <th scope="col">Mobile</th>
+              <th scope="col">Total Amount</th>
+              <th scope="col">Payment Method</th>
+              <th scope="col">Status</th>
+
+            </tr>
+          </thead>
+          <tbody>
+            {{#each orders}}
+              <tr>
+
+                <td>{{this.date}}</td>
+                <td>{{this._id}}</td>
+                <td>{{this.deliveryAddress.address}}</td>
+                <td>{{this.deliveryAddress.pincode}}</td>
+                <td>{{this.deliveryAddress.mobile}}</td>
+                <td>{{this.totalAmount}}</td>
+                <td>{{this.paymentMethod}}</td>
+                <td>
+                    <select class="dropdown_select" onchange="statusChange('{{this._id}}')">
+                   <option value={{this.status}}>{{this.status}}</option>
+                    <option value="Shipped">Shipped</option>
+                    <option value="Delivered">Delivered</option>
+                  </select></td>
+                <td>
+              </tr>
+            {{/each}}
+          </tbody>
+        </table>
+     </div>
+
+    </div>
+  </div>
+</section>
+<script>
+    
+    function statusChange(orderId){
+        
+  $('#orders').on('change', '.dropdown_select' , function () {
+      console.log(orderId)
+     console.log("value is " + $(this).find(":selected").val());
+     
+        $.ajax({
+             url:'/admin/edit-orders',
+        data:{
+            order:orderId,
+            status:$(this).find(":selected").val(),
+        },
+        method:'post',
+        success:(response)=>{
+         alert("status updated")
+            location.reload()
+        }
+        })
+
+});
+       
+       
+      
+       
+    }
+</script>

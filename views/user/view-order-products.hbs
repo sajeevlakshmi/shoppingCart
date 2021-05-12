@@ -1,0 +1,35 @@
+<section class="order-product-details">
+    <div class="container">
+         <h2 class="text-center">Product Details</h2>
+         <div class="table-responsive">
+        <table class="table p-5">
+            <thead>
+                <tr>
+                    <th scope="col">Item</th>
+                    <th scope="col">Title</th>
+                    <th scope="col">Quantity</th>
+                     <th scope="col">Price</th>
+                    
+
+                </tr>
+            </thead>
+            <tbody>
+             {{#each products}}
+                <tr>
+                
+                    <td>
+                        <img style="width:30px;height:40px" src="/product-images/{{this.product._id}}.jpg" alt="">
+                    </td>
+                    <td>{{this.product.name}}</td>
+                
+                   <td>{{this.quantity}}</td>
+                    <td >{{this.product.Price}}</td>
+                    
+                </tr>       
+                {{/each}}
+            </tbody>
+            </table>
+            </div>
+            <hr>
+    </div>
+    </section>

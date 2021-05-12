@@ -1,0 +1,54 @@
+   
+   <header>
+       <div class="header-wrap">
+        <nav class="navbar navbar-expand-lg navbar-light header-style">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
+                aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="title">
+            <a class="navbar-brand" href="/"><img src="./images/cake-food.png" class="image"> Cake Mart</a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+                <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/home">Home</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/products">Product<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/cart">Cart<span class="badge badge-success" id="cart-count">{{cartCount}}</span></a>
+                    </li>
+      
+                    {{#if user}}
+                    <li class="nav-item">
+                        <a class="nav-link" href="/orders">orders</a>
+                    </li>
+                    {{/if}}
+                </ul>
+               <div class="dropdown ">
+  <button class="btn btn-secondary dropdown-toggle " type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    {{#if user}}
+{{user.name}}
+{{else}}
+Account
+    {{/if}}
+    
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+      {{#if user}}
+    <a class="dropdown-item" href="/logout">Logout</a>
+    {{else}}
+    <a class="dropdown-item" href="/login">Login</a>
+    {{/if}}
+  
+  </div>
+</div>
+            </div>
+        </nav>
+        </div>
+    </header>
+
+   

@@ -1,0 +1,79 @@
+<section>
+    <div class="banner-container">
+        <div class="row align-items-center ">
+            {{!-- left section --}}
+            <div class=" col-xs-12 col-md-6 p-5 left-section">
+                <h1 class="">
+                    Welcome to the Land of Cakes
+                </h1>
+                <p>
+                    one stop cake destination for all your parties and events.
+                </p>
+               
+            </div>
+            {{!-- right section --}}
+           
+            <div class="col-xs-12 col-md-6 p-5 right-section ml-auto  ">
+                <h4>Login
+
+                </h4>
+                <form class="form-group" action="/login" method="post" enctype="">
+                    {{#if loginErr}}
+                    <p class="error">{{loginErr}}</p>
+                    {{/if}}
+                    <div class="input-group">
+                        <input type="text " id="username" placeholder="Username" name="email" />
+                        {{!-- <label for="name">Username</label> --}}
+                    </div>
+                    <div class="input-group">
+                        <input type="password" id="password" placeholder="Password" name="password" />
+                        {{!-- <label for="name">Password</label> --}}
+                    </div>
+                    <div class="submit-section">
+                        <button type="submit" class="btn   ">Login</button>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+
+
+        </div>
+    </div>
+
+</section>
+<section>
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h4>Download our app</h4>
+                    <p>Download app for android and IOS mobile phone</p>
+                    <div class="app-logo">
+                        <img src="./images/appstore.png" alt="image1">
+                        <img src="./images/googleplay.jpg" alt="image2">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <img src="./images/cake-food.png" class="image" alt="cake1">
+                    <p>We are making your taste in our cake</p>
+                </div>
+                <div class="col-md-4">
+                    <h4>Follow Us</h4>
+                    <ul>
+                        <li> facebook</li>
+                        <li> Instagram</li>
+                        <li> Twitter</li>
+                        <li> Youtube</li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <p class="copyright">
+                Copyright @lps2021
+            </p>
+        </div>
+    </div>
+</section>

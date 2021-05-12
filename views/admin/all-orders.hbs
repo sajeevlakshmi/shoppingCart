@@ -1,0 +1,44 @@
+<section class="order-details">
+    <div class="container">
+        
+            <h2 class="text-center">All Orders</h2>
+             <div class="update-btn">
+            <a href="/admin/edit-orders" class="btn text-center">Update Status</a>
+            </div>
+         <div class="table-responsive">
+        <table class="table p-5">
+            <thead>
+                <tr>
+                    <th scope="col">Date</th>
+                    <th scope="col">OrderId</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Pincode</th>
+                     <th scope="col">Mobile</th>
+                     <th scope="col">Total Amount</th>
+                     <th scope="col">Payment Method</th>
+                     <th scope="col">Status</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                {{#each orders}}
+                <tr>
+                
+                    <td>{{this.date}}</td>
+                     <td>{{this._id}}</td>
+                    <td>{{this.deliveryAddress.address}}</td>
+                    <td>{{this.deliveryAddress.pincode}}</td>
+                    <td>{{this.deliveryAddress.mobile}}</td>
+                   <td>{{this.totalAmount}}</td>
+                   <td>{{this.paymentMethod}}</td>
+                   <td>{{this.status}}</td>
+                   <td><a href="/admin/view-order-products/{{this._id}}" class="btn">View products</a></td>
+                 
+                </tr>       
+                {{/each}}
+            </tbody>
+        </table>
+       </div> 
+       {{!-- </div> --}}
+    </div>
+</section>

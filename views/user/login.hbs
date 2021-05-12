@@ -1,0 +1,32 @@
+<section class="login-page">
+<div class="row">
+    <div class="col-md-6 m-auto">
+        <div class="container del-details">
+            <h2 class="text-center">Login</h2>
+            <form action="/login" method="post" enctype="">
+            {{#if loginErr}}
+            <p class="error">{{loginErr}}</p>
+              {{/if}}
+            
+                <div>
+                    <label for="">Email Address</label>
+                    <input type="email" class="form-control" name="email" value="sajeev.lakshmi@gmail.com">
+                </div>
+                <div>
+                    <label for="">Password</label>
+                    <input type="password" class="form-control" name="password" value="123">
+                </div>
+
+                <div class="submit-section">
+                <button type="submit" class=" btn">Login</button>
+                
+                </div>
+                 <div class="submit-section">
+                <a href="/signup" >Create New Account</a>
+                </div>
+                
+              </form>
+        </div>
+    </div>
+</div>
+</section>
