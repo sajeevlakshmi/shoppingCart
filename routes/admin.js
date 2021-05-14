@@ -34,7 +34,7 @@ router.post('/edit-orders',(req,res)=>{
 })
 router.get('/view-order-products/:id',async(req,res)=>{
   let products= await userHelpers.getOrderProducts(req.params.id)
-  res.render('user/view-order-products',{admin:true,products})
+  res.render('admin/view-order-products',{admin:true,products})
   })
 
 

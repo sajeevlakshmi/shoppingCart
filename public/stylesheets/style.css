@@ -186,7 +186,12 @@ list-style-type: none;
     text-align: center;
 }
 /* Cart details */
-.cart-details,.order-product-details,.login-page{
+.order-product-details{
+    background:radial-gradient( white,pink)  ;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.cart-details,.login-page{
     height: 90vh;
     background:radial-gradient( white,pink)  ;
     background-size: cover;
@@ -198,7 +203,7 @@ list-style-type: none;
     width: 100%;
     background:radial-gradient( white,pink)  ;
     background-position: center;
-    background-repeat:repeat-y;
+    
     background-size: cover;
     background-attachment: fixed;
 }
