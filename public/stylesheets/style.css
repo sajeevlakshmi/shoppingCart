@@ -194,10 +194,11 @@ list-style-type: none;
 }
 .order-details,.placeorder{
       
-    /* height: 100vh;  */
+    height: 90vh; 
     width: 100%;
     background:radial-gradient( white,pink)  ;
-    /* background-position: center; */
+    background-position: center;
+    background-repeat:repeat-y;
     background-size: cover;
     background-attachment: fixed;
 }

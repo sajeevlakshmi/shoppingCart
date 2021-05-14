@@ -237,8 +237,9 @@ getTotalAmount:(userId)=>{
             
         ]).toArray()
        
-        console.log(total[0].total)
-        resolve(total[0].total)
+            console.log(total[0].total)
+            resolve(total[0].total)
+   
          })
 
 },
@@ -270,6 +271,10 @@ getCartProductList:(userId)=>{
 return new Promise(async(resolve,reject)=>{
     let cart= await db.get().collection(collection.CART_COLLECTION).findOne({user:ObjectID(userId)})
     console.log("cart products",cart)
+    if (cart==null){
+resolve({products:false})
+    }
+    else
   resolve(cart.products)
 })
 },
