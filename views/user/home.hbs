@@ -2,8 +2,8 @@
     <div class="banner-container">
         <div class="row align-items-center ">
             {{!-- left section --}}
-            <div class=" col-xs-12 col-md-6 p-5 left-section">
-                <h1 class="">
+            <div class=" col-xs-12 col-md-6  left-section">
+                <h1 >
                     Welcome to the Land of Cakes
                 </h1>
                 <p>
@@ -12,21 +12,23 @@
                
             </div>
             {{!-- right section --}}
-           
-            <div class="col-xs-12 col-md-6 p-5 right-section ml-auto  ">
-                <h4>Login
+           <div class="col-xs-12 col-md-2">
+              </div>
+            <div class="col-xs-12 col-md-4  right-section  ">
+                <h4 class="text-center">Login
 
                 </h4>
+                <div class="login-form">
                 <form class="form-group" action="/login" method="post" enctype="">
                     {{#if loginErr}}
                     <p class="error">{{loginErr}}</p>
                     {{/if}}
                     <div class="input-group">
-                        <input type="text " id="username" placeholder="Username" name="email"  required/>
+                        <input type="text " id="username" placeholder="Username" name="email" value="lakshmi@gmail.com" required/>
                         {{!-- <label for="name">Username</label> --}}
                     </div>
                     <div class="input-group">
-                        <input type="password" id="password" placeholder="Password" name="password" required/>
+                        <input type="password" id="password" placeholder="Password" name="password" value="123" required/>
                         {{!-- <label for="name">Password</label> --}}
                     </div>
                     <div class="submit-section">
@@ -35,6 +37,7 @@
                     </div>
 
                 </form>
+                </div>
 
             </div>
 
@@ -44,6 +47,7 @@
     </div>
 
 </section>
+
 <section>
     <div class="footer">
         <div class="container">

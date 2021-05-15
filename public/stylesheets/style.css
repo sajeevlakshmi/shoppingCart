@@ -11,13 +11,14 @@
 
 body{
     margin: 0;
-    padding: 0;
-   
+    padding: 0;  
     font-family: Arial, Helvetica, sans-serif;
+    
 }
 
 .header-style{
-    background-color:var(--primary-pink);
+   
+    background:radial-gradient( white,rgb(196, 21, 79))  ;
     position: fixed;
 }
  .title{
@@ -37,8 +38,7 @@ body{
 .banner-container{
     
     width: 100%;
-    /* height: 90vh; */
-    /* max-width:1300px; */
+    height: 90vh;
     margin:auto;
     padding-left: 25px;
     padding-right: 25px;
@@ -50,15 +50,15 @@ body{
 }
 .banner-container .row{
     width: 100%;
+    height: 100%;
     box-sizing: border-box;
 }
 
 .left-section {
     margin: 0;
-    margin-top: 100px;
-    
-   
+    padding: 0;  
 }
+
 .left-section h1,h2,h4{
     color: var(--primary-pink) !important;
     text-shadow: 1px 1px 2px pink;
@@ -71,17 +71,18 @@ body{
     font-family: 'Lobster', cursive;
 }
 .right-section {
-
     margin: 0;
-    margin-top: 150px;
-    
-    
+    padding:0;
+
 }
+
+
 .right-section h4{
     color: var(--primary-pink);}
+
 .input-group input{
     height: 40px;
-    width: 50%;
+    width: 100%;
     border-radius: 5px;
     outline:none;
     border:1px solid silver;
@@ -102,12 +103,10 @@ body{
     margin:30px,20px;
     border-radius:30px;
 }
-/* .homewrap{
-    background:linear-gradient(rgb(170, 152, 119), rgb(214, 107, 143));
-} */
+
 /* view products */
 .products{
-    /* height:100vh; */
+   
     width: 100%;
     background:radial-gradient( white,pink)  ;
     background-position: center;
@@ -152,8 +151,12 @@ body{
     flex-wrap: wrap;
     justify-content: space-around;
 }
+.col{
+    padding-left: 65px !important;
+}
 .footer{
-    background: #000;
+    /* background: #000; */
+    background:radial-gradient( white,rgb(196, 21, 79),rgb(149, 71, 151)) ;
     color:#8a8a8a;
     font-size: 10px;
     font-family: Arial, Helvetica, sans-serif;
