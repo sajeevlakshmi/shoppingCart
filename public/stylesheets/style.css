@@ -5,6 +5,7 @@
 :root{
     --primary-pink: rgb(196, 21, 79);
     --primary-text: rgb(214, 107, 143);
+    --primary-white:#fff;
 
 
 }
@@ -33,7 +34,22 @@ body{
     text-transform: uppercase;
     color:rgb(90 25 46) !important;
     font-family: 'Lobster', cursive;
+    margin-left: 0.75rem;
+    margin-right: 0.75rem;
     
+ }
+ .navbar-nav>li>a.active:focus{
+    border-top:0.18rem solid white
+  }
+  .navbar-nav>li>a:hover{
+    border-top:0.18rem solid white
+  }
+ nav div a{
+    text-transform: uppercase;
+    color:rgb(90 25 46) !important;
+    font-family: 'Lobster', cursive;
+    margin-left: 0.75rem;
+    margin-right: 0.75rem;
  }
 .banner-container{
     
@@ -151,14 +167,17 @@ body{
     flex-wrap: wrap;
     justify-content: space-around;
 }
-.col{
+/* .col{
     padding-left: 65px !important;
+} */
+.footer-col-1,.footer-col-2,.footer-col-3{
+    text-align: center !important;
 }
 .footer{
     /* background: #000; */
     background:radial-gradient( white,rgb(196, 21, 79),rgb(149, 71, 151)) ;
     color:#8a8a8a;
-    font-size: 10px;
+    font-size: 13px;
     font-family: Arial, Helvetica, sans-serif;
     padding:20px 0 20px;
     }

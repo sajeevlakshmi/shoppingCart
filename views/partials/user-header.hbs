@@ -7,15 +7,15 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="title">
-            <a class="navbar-brand" href="/"><img src="./images/cake-food.png" class="image"> Cake Mart</a>
+            <a class="navbar-brand" href="/"><img src="./images/cake-food.png" class="image"> Cake Land</a>
             </div>
 
             <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
                 <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" href="/home">Home</a>
+                        <a class="nav-link active" href="/home">Home</a>
                     </li>
-                    <li class="nav-item active">
+                    <li class="nav-item ">
                         <a class="nav-link" href="/products">Product<span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
@@ -29,14 +29,14 @@
                     {{/if}}
                 </ul>
                <div class="dropdown ">
-  <button class="btn btn-secondary dropdown-toggle " type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <a class=" dropdown-toggle " type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     {{#if user}}
 {{user.name}}
 {{else}}
 Account
     {{/if}}
     
-  </button>
+  </a>
   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
       {{#if user}}
     <a class="dropdown-item" href="/logout">Logout</a>
