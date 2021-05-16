@@ -1,5 +1,5 @@
 
-    <section class="products">
+    {{!-- <section class="products">
         <div class="container ">
             <div class="row p-2">
                 {{#each products}}
@@ -9,7 +9,7 @@
                         <div class="card-body">
                             <h5 class="card-text">{{this.name}}</h5>           
                             <p class="card-text">${{this.Price}}</p>
-                            {{!-- <p class="card-text">{{this.description}}</p> --}}
+                          
                           
                             <button  onClick="addToCart('{{this._id}}')"class="btn btn-primary">Add to Cart</button>
                         </div>
@@ -19,8 +19,43 @@
                 {{/each}}
             </div>
         </div>
-    </section>
-    <script>
-       
-    </script>
+    </section> --}}
+   
 
+
+<section class="products">
+  <div class="container">
+    <div class="row p-2">
+      {{#each products}}
+      <div class="col-md-3 pb-2">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img
+                class="card-img-top"
+                src="/product-images/{{this._id}}.jpg"
+                alt="Card image cap"
+              />
+            </div>
+            <div class="flip-card-back">
+              <div class="back-header">
+                <img
+                  class="card-img-top"
+                  src="/product-images/{{this._id}}.jpg"
+                  alt="Card image cap"
+                />
+              </div>
+              <div class="back-footer">
+                <h5>{{this.name}}</h5>
+                <p>${{this.Price}}</p>
+                <button  onClick="addToCart('{{this._id}}')"class="btn">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {{/each}}
+    </div>
+  </div>
+
+</section>
