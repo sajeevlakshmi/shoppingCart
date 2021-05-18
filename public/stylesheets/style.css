@@ -38,9 +38,11 @@ body{
     font-family: 'Lobster', cursive;
     margin-left: 0.75rem;
     margin-right: 0.75rem;
+  
     
  }
  .navbar-nav>li>a.active:focus{
+    
     border-top:0.18rem solid white
   }
   .navbar-nav>li>a:hover{
@@ -75,6 +77,12 @@ body{
 .left-section {
     margin: 0;
     padding: 0;  
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    position:absolute;  
+    justify-content: center;
+    align-items: center;
 }
 
 .left-section h1,h2,h4{
@@ -88,15 +96,10 @@ body{
     color: var(--primary-pink) !important;
     font-family: 'Lobster', cursive;
 }
-.right-section {
-    margin: 0;
-    padding:0;
-
-}
 
 
-.right-section h4{
-    color: var(--primary-pink);}
+
+
 
 .input-group input{
     height: 40px;
@@ -114,6 +117,14 @@ body{
     height:50px
 }
 .btn{
+    display:inline-block;
+    background-color: var(--primary-pink);;
+    color:white ;
+    padding:8px,30px;
+    margin:30px,20px;
+    border-radius:30px;
+}
+.home-btn{
     display:inline-block;
     background-color: var(--primary-pink);;
     color:white ;
@@ -224,8 +235,9 @@ body{
     text-align: center !important;
 }
 .footer{
-    position: relative;
-    top: 76px;
+    /* position: relative;
+    top: 76px; */
+   
     width: 100%;
     /* background: #000; */
     background:radial-gradient( white,rgb(196, 21, 79),rgb(149, 71, 151)) ;
@@ -267,6 +279,7 @@ list-style-type: none;
     background:radial-gradient( white,pink)  ;
     background-size: cover;
     background-attachment: fixed;
+    height: 90vh;
 }
 .cart-details,.login-page{
     position: relative;
@@ -338,5 +351,8 @@ list-style-type: none;
         position: absolute;
         right: 10px;
         top:120px;
+    }
+    .left-section{
+        margin-left: 35px;
     }
 }
