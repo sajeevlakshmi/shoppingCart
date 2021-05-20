@@ -312,6 +312,11 @@ list-style-type: none;
     background-size: cover;
     background-attachment: fixed;
 }
+.login-page .row{
+    width:100%;
+    padding-left: 27px;
+   
+}
 .order-details,.placeorder{
     position: relative;
     top: 76px;
